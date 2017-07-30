@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>NASA imegery API</title>
+	<meta charset="utf-8" />
+    <link href="ImageSlideShow.css" rel="stylesheet" />
+</head>
+<body>
+    <input type="number" id="txtLat" placeholder="Enter latitude" />
+    <input type="number" id="txtLon" placeholder="Enter longitude" />
+    <input type="text" id="txtDt" placeholder="Enter start date: YYYY-MM-DD" />
+
+    <button onclick="perfAction()">Load Images</button>
+    
+    <h1>Image Slide Show</h1>
+    <!-- Dynamically load images into image frame -->
+    <div id="imgFrame">
+        <div id="loading">Loading...</div>
+    </div>
+    
+    <script src="NASA_Imagery.js"></script>
+    <script src="ImageSlideShow.js"></script>
+    <script>
+        function perfAction() {
+            var latitude = document.getElementById("txtLat").value;
+            var longitude = document.getElementById("txtLon").value;
+            var startDt = document.getElementById("txtDt").value;
+
+            onClickFunction(latitude, longitude, startDt);
+
+            slideShowFactory(imageUrlArray);
+        }
+        
+    </script>
+</body>
+</html>

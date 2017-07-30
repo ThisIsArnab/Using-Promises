@@ -1,0 +1,44 @@
+﻿html{
+    min-height:100%;
+}
+body{
+    min-height:100%;
+    margin:0;
+}
+
+#logBox{
+    min-height:10px;
+    max-height: 100px;
+    width:400px;
+    overflow:auto;
+    border:1px solid black;
+    position:absolute;
+    bottom:100px;
+    left:calc(50% - 200px);
+}
+
+#imgFrame{
+    max-width: calc(480px * 16 / 9);
+    max-height: 480px;
+    margin:auto;    
+    border: 5px solid black;
+}
+
+.box-initial {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #0000FF;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box-rotate {
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
